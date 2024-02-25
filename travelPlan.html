@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Plan</title>
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <br>
+    <div class="card"> 
+        <div class="card-body">
+            <!-- Create a row for user input travel date -->
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group"> 
+                        <!-- Use label to tell user what this item for  -->
+                        <label for="new-start-date">Travel Start Date</label>
+                        <!-- User needs to input a date he starts the travel -->
+                        <input type="date" class="form-control" id="new-start-date">
+                    </div>
+                </div>
+                <!-- Create another colum for user to input date to end travel -->
+                <div class="col-sm">
+                    <div class="form-group"> 
+                        <label for="new-end-date">Travel End Date</label>
+                        <input type="date" class="form-control" id="new-end-date">
+                    </div>
+                </div>  
+            </div>
+            
+            <!-- In this row user needs to input where he is going for travel -->
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="new-destination">Destination</label>
+                        <!-- This type of input is text -->
+                        <input type="text" class="form-control" id="new-destination">
+                        <button id="add" class="btn btn-primary form-control">Create</button>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create a table to show user what are the destinations they have put in -->
+    <table id="list" class="table table-stripped">
+        <tr>
+            <th>Destination</th>
+            <th>Date Created</th>
+            <th>Travel Start Date</th>
+            <th>Travel End Date</th>
+    
+            <th>Actions</th>
+        </tr>
+    </table>
+
+
+    
+
+    <script src="travelPlan.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
